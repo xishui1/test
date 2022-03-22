@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <script src="./js/flexible.js"></script>
+        <title>阳春踏青线上行，流量权益两相宜</title>
+        <meta name="description" content="阳春踏青线上行，流量权益两相宜" />
+        <link rel="stylesheet" href="./css/qm.css" />
+    </head>
+    <body>
+        <div class="link-download show">
+            <img class="logo" src="images/img-logo.png" alt="">
+            <span class="load-text">去中国移动APP体验更多服务</span>
+            <a class="load-btn" href="#" id="loadBtn"><span class="load-btn-text">下载APP</span></a>
+        </div>
+        <div class="page">
+            <div class="animate-wap">
+                <div class="animate-item swallow1"></div>
+                <div class="animate-item swallow2"></div>
+                <div class="animate-item balloon1-line"></div>
+                <div class="animate-item balloon2-line"></div>
+                <div class="animate-item balloon1"></div>
+                <div class="animate-item balloon2"></div>
+                <div class="animate-item tag"></div>
+                <div class="animate-item tag-line"></div>
+            </div>
+            <div class="goods-box-wap">
+                <div class="goods-box">
+                    <div class="box-row">
+                        <div class="box1 box-wap">
+                            <a class="box-header" href="//wx.10086.cn/website/businessPlatform/shop?pageid=f8ddb380639847468916f5b0b19b9f68&secondChannel=70001_bannerQQ"></a>
+                            <a class="img-wap" href="https://wx.10086.cn/website/businessPlatform/shop?pageid=f8ddb380639847468916f5b0b19b9f68&secondChannel=70001_bannerQQ">
+                                <img src="./images/1g.png" alt="1元享1G" />
+                            </a>
+                        </div>
+                        <div class="box2 box-wap">
+                            <a class="box-header" href="//wx.10086.cn/website/businessPlatform/shop?pageid=81c587a250604f53bc223a8e5cbdfbe5&secondChannel=70001_huodong3"></a>
+                            <a class="img-wap" href="//wx.10086.cn/website/businessPlatform/shop?pageid=81c587a250604f53bc223a8e5cbdfbe5&secondChannel=70001_huodong3">
+                                <img src="./images/vedio.png" alt="1元享权益" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-wap box3-wap">
+                        <a class="box-header box-header-phone" href="//wx.10086.cn/website/businessPlatform/shop?pageid=7066708d996d4aefa86dd1e07cbd20d2"></a>
+                        <a class="box-header  box-header-broad" href="//wx.10086.cn/website/businessPlatform/home/broadband/appointment?productId=2021042815422790279626"></a>
+                        <div class="box3">
+                            <div class="box3-sub">
+                                <a href="//wx.10086.cn/website/businessPlatform/shop?pageid=7066708d996d4aefa86dd1e07cbd20d2">
+                                    <img src="./images/phone.png" alt="终端" /></a>
+                            </div>
+                            <div class="box3-sub">
+                                <a href="//wx.10086.cn/website/businessPlatform/home/broadband/appointment?productId=2021042815422790279626">
+                                    <img src="./images/broadband.png" alt="宽带" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var u = navigator.userAgent;
+        alert(navigator.userAgent)
+        var device = ""; //当前设备信息
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
+            device = "Android";
+        } else if (u.indexOf('iPhone') > -1) { //苹果手机
+            device = "iPhone";
+        } else if (u.indexOf('Windows Phone') > -1) { //winphone手机
+            device = "WindowsPhone";
+        }
+
+        //点击当前下载的应用时，根据当前系统进行判断和显示
+        function downLoad(android, ios) {
+            var btn = document.getElementById("loadBtn")
+            // console.log(device)
+            if (device == "iPhone") {
+                btn.setAttribute("href", ios);
+            } else {
+                btn.setAttribute("href", android);
+
+            }
+        }
+        downLoad('https://app.10086.cn',
+            'https://apps.apple.com/cn/app/zhong-guo-yi-dong-shou-ji/id583700738?platform=iphone');
+    </script>
+</html>
